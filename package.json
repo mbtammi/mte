@@ -48,6 +48,7 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "prettier": "^2.6.2"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
@@ -62,6 +63,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "predeploy": "gatsby develop",
+    "deploy": "gh-pages -d build",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
