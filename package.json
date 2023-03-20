@@ -42,6 +42,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.6.0",
     "react-instantsearch-dom": "^6.30.0",
+    "react-scripts": "^5.0.1",
     "remark-unwrap-images": "^3.0.1",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
@@ -64,11 +65,23 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
