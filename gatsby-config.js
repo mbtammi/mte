@@ -1,15 +1,14 @@
 require("dotenv").config()
 
 module.exports = {
-  pathPrefix: "/mte",
   siteMetadata: {
     title: `Miro Tammi`,
     author: {
       name: `Miro Tammi`,
-      summary: `Miro Tammi is a Software Engineer based out of Houston, TX.`,
+      summary: `Miro Tammi is a Software Engineer based out of Finland.`,
     },
-    description: `Miro Tammi is a Software Engineer based out of Houston, TX.`,
-    siteUrl: `https://b-r.io`,
+    description: `Miro Tammi is a Software Engineer based out of Finland.`,
+    siteUrl: `http://mtemedia.org`,
     social: {
       linkedin: `brianruizy`,
       github: `BrianRuizy`,

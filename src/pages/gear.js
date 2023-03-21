@@ -46,7 +46,7 @@ const gear = {
     desc: "A 75% with rotary knob and hot swappable switches.",
     stores: {
       amazon: {
-        affiliateLink: "https://amzn.to/3U9tcE9",
+        affiliateLink: "https://amzn.to/3Z4FAHB",
         icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
       },
     },
@@ -68,7 +68,7 @@ const gear = {
     desc: "Ergonomic and comfortable to be used for all day use, love the scrolling!",
     stores: {
       amazon: {
-        affiliateLink: "https://amzn.to/3U5syHG",
+        affiliateLink: "https://amzn.to/3FAiZfh",
         icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
       },
     },

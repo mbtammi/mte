@@ -28,28 +28,28 @@ import { GiWeightLiftingUp } from "react-icons/gi"
 
 
 const profiles = {
-  youtube: {
-    name: "YouTube",
-    desc: "My videos",
-    url: "https://www.youtube.com/channel/UCCIFp-Se_xjfYc94H04oK7Q",
-    icon: <FaYoutube />,
-  },
+  // youtube: {
+  //   name: "YouTube",
+  //   desc: "My videos",
+  //   url: "https://www.youtube.com/channel/UCCIFp-Se_xjfYc94H04oK7Q",
+  //   icon: <FaYoutube />,
+  // },
   github: {
     name: "GitHub",
     desc: "My open-source projects",
-    url: "https://github.com/BrianRuizy",
+    url: "https://github.com/mbtammi",
     icon: <FaGithub />,
   },
   linkedin: {
     name: "LinkedIn",
     desc: "My professional profile",
-    url: "https://www.linkedin.com/in/brianruizy/",
+    url: "https://www.linkedin.com/in/miro-tammi-701bb3205/",
     icon: <FaLinkedin />,
   },
   instagram: {
     name: "Instagram",
-    desc: "@brianruizy",
-    url: "https://www.instagram.com/brianruizy/",
+    desc: "@mirotammi",
+    url: "https://www.instagram.com/mirotammi/",
     icon: <FaInstagram />,
   },
   // hevyapp: {

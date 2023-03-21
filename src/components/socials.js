@@ -23,20 +23,20 @@ const profiles = {
     name: "Instagram",
     url: "https://www.instagram.com/mirotammi/",
     icon: "https://johnhoward.on.ca/peterborough/wp-content/uploads/sites/12/2021/03/instagram-logo-svg-vector-for-print.svg",
-    followers: "1139",
-  },
-  youtube: {
-    name: "YouTube",
-    url: "https://www.youtube.com/channel/UCCIFp-Se_xjfYc94H04oK7Q",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/768px-YouTube_full-color_icon_%282017%29.svg.png",
-    followers: "602",
-  },
+    followers: "1621",
+  }
+  // youtube: {
+  //   name: "YouTube",
+  //   url: "https://www.youtube.com/channel/UCCIFp-Se_xjfYc94H04oK7Q",
+  //   icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/768px-YouTube_full-color_icon_%282017%29.svg.png",
+  //   followers: "602",
+  // },
 }
 
 const Socials = () => {
   const [gitFollowers, setGitFollowers] = React.useState(0)
   React.useEffect(() => {
-    fetch("https://api.github.com/users/BrianRuizy")
+    fetch("https://api.github.com/users/mbtammi")
       .then(res => res.json())
       .then(data => {
         setGitFollowers(data.followers)
