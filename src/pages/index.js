@@ -148,6 +148,17 @@ const Index = ({ data, location }) => {
                 "&.Mui-selected": { color: "text.primary" },
               }}
             />
+            <Tab
+              label="Code Portfolio"
+              component="a"
+              href="/code"
+              sx={{
+                textTransform: "capitalize",
+                fontWeight: 400,
+                minWidth: "60px",
+                "&.Mui-selected": { color: "text.primary" },
+              }}
+            />
           </Tabs>
         </Box>
         

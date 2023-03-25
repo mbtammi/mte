@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import IconButton from "@mui/material/IconButton"
-import BackpackIcon from "@mui/icons-material/Backpack"
+import CodeIcon from '@mui/icons-material/Code';
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import Alert from "@mui/material/Alert"
 import Chip from "@mui/material/Chip"
@@ -27,49 +27,62 @@ import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 
-const gear = {
-  "Vegan Leather Desk Mat": {
-    category: "Desk Setup",
-    image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/81ZJc3HVaAL._AC_SL1500_.jpg",
-    desc: "Leather and Recycled PET Felt | Document Hideaway",
-    stores: {
-      amazon: {
-        affiliateLink: "https://amzn.to/3JEoNFC",
+import { FaInstagram } from "react-icons/fa"
+import login from '../images/login.png'
+import rocketgame from '../images/rocketgame.png'
+import register from '../images/register.png'
+import webapp from '../images/webapp.png'
+import {WiDayCloudyGusts} from "react-icons/wi"
 
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+const returnBold = () => {
+  var stack = "STACK"
+  //return <b>stack</b>
+  return stack.bold()
+}
+
+const gear = {
+
+  "HyvyApp": {
+    category: "Code Projects",
+    image: webapp,
+    desc: "Same concept as the mobile version, but with a team and more modern solutions\n\n STACK: React, NodeJs, MongoDB, JavaScript",
+    stores: {
+      amazon: {
+        affiliateLink: "https://github.com/mbtammi/hyvyweb",
+        icon: "https://cdn-icons-png.flaticon.com/512/37/37631.png",
       },
     },
   },
-  "Keychron K6 Mechanical Keyboard": {
-    category: "Desk Setup",
-    image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/61qtDACqnhL._AC_SL1500_.jpg",
-    desc: "A 65% mechanical with hot swappable switches.",
+  "Spacerocket": {
+    category: "Code Projects",
+    image: rocketgame,
+    desc: "Time and point based Game where you collect fuel and dodge meteors in space\n\n STACK: C#, Jypeli as an engine.",
     stores: {
       amazon: {
-        affiliateLink: "https://amzn.to/3Z4FAHB",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+        affiliateLink: "https://gitlab.jyu.fi/mbtammi/ohj1ht",
+        icon: "https://cdn-icons-png.flaticon.com/512/37/37631.png",
       },
     },
   },
-  "Minimal laptop stand": {
-    category: "Desk Setup",
-    image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/618YQXDbaRL._AC_SL1500_.jpg",
-    desc: "Minimal stand for your laptop while keeping it ventilated",
+  "HyvyApp mobile version": {
+    category: "Code Projects",
+    image: login,
+    desc: "Mobile app to help students discover their educational path\n\n" + "STACK:" + " React Native, NodeJS",
     stores: {
       amazon: {
-        affiliateLink: "https://amzn.to/408W1E6",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+        affiliateLink: "https://gitlab.jyu.fi/mbtammi/mteifv1",
+        icon: "https://cdn-icons-png.flaticon.com/512/37/37631.png",
       },
     },
   },
-  "Logitech MX Master 3S Mouse": {
-    category: "Desk Setup",
-    image: "https://m.media-amazon.com/images/I/61ni3t1ryQL._AC_SL1500_.jpg",
-    desc: "Ergonomic and comfortable to be used for all day use, love the scrolling!",
+  "Webpage register": {
+    category: "Code Projects",
+    image: register,
+    desc: "Register done for customers to make a request of a webpage\n\n STACK: Java, JavaFX",
     stores: {
       amazon: {
-        affiliateLink: "https://amzn.to/3FAiZfh",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+        affiliateLink: "https://gitlab.jyu.fi/mbtammi/ohj2",
+        icon: "https://cdn-icons-png.flaticon.com/512/37/37631.png",
       },
     },
   },
@@ -84,27 +97,26 @@ const gear = {
   //     },
   //   },
   // },
-  "MOKiN USB C Hub, USB-C Hub (9-in-1) with 2 X HDMI": {
-    category: "Desk Setup",
-    image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/81mv2HOPXqL._AC_SL1500_.jpg",
-    desc: "The one cable solution for my MacBook Pro.",
+  "Weather app": {
+    category: "Code Projects",
+    image: "https://static.vecteezy.com/system/resources/previews/014/392/000/original/illustration-of-cloud-icon-on-transparent-background-free-png.png",
+    desc: "Single page app with rest api to get info from countries to display weather data\n\n STACK: JavaScript, CSS",
     stores: {
       amazon: {
-        affiliateLink: "https://amzn.to/3naP07d",
-
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+        affiliateLink: "https://github.com/mbtammi/fullstack/tree/master/osa2/maidentiedot",
+        icon: "https://cdn-icons-png.flaticon.com/512/37/37631.png",
       },
     },
   },
-  "ASUS VS248H Monitor": {
-    category: "Desk Setup",
-    image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/81M1TICjeoL._AC_SL1500_.jpg",
-    desc: "A 1920 x 1080 LED Display, great for multitasking and coding.",
+
+  "Future projects": {
+    category: "Code Projects",
+    image: "https://thumbs.dreamstime.com/b/binary-code-question-mark-quote-frame-color-icon-vector-illustration-sign-isolated-symbol-195613382.jpg",
+    desc: "I will update here from my latest projects.",
     stores: {
       amazon: {
-        affiliateLink: "https://amzn.to/3nbB1hz",
-
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+        affiliateLink: "https://github.com/mbtammi",
+        icon: "https://cdn-icons-png.flaticon.com/512/37/37631.png",
       },
     },
   },
@@ -233,6 +245,8 @@ const GearPage = ({ data, location }) => {
     return acc
   }, [])
 
+
+
   return (
     <Layout
       location={location}
@@ -246,13 +260,13 @@ const GearPage = ({ data, location }) => {
               color: "text.primary",
             }}
           >
-            <BackpackIcon fontSize="small" />
+            <CodeIcon fontSize="small" />
           </IconButton>
-          {"Miro's Gear"}
+          {"Miro's Code Portfolio"}
         </Box>
       }
     >
-      <Seo title={"My Gear"} />
+      <Seo title={"Code Portfolio"} />
       <Container
         maxWidth="string"
         disableGutters
@@ -278,7 +292,7 @@ const GearPage = ({ data, location }) => {
             variant="scrollable"
             scrollButtons="auto"
             aria-label="nav tabs example"
-            value={1}
+            value={3}
             sx={{
               "& .MuiTabs-flexContainer": {
                 gap: "1rem",
@@ -323,7 +337,7 @@ const GearPage = ({ data, location }) => {
                 minWidth: "60px",
                 "&.Mui-selected": { color: "text.primary" },
               }}
-            />¨
+            />
             <Tab
               label="Code Portfolio"
               component="a"
@@ -344,11 +358,9 @@ const GearPage = ({ data, location }) => {
             color: "primary.dark",
             "& .MuiSvgIcon-root": { color: "primary.dark" },
           }}
-          icon={"🧐"}
+          icon={"🤔"}
         >
-          This is a list of the gear I actually own and recommend. The affiliate
-          links come at no extra cost but it does however help support my
-          content creation!
+          These are all my own projects or projects done in a team. This page will get updated every now and then. My stack consists of also TypeScript , Bootstrap and AWS cloud for example. Be sure to Contact Me if any questions come up.
         </Alert>
 
         <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -468,7 +480,7 @@ const GearPage = ({ data, location }) => {
                                   variant="caption"
                                   color="text.disabled"
                                 >
-                                  Buy it on
+                                  Code here
                                 </Typography>
                               </Box>
                               <CardActions

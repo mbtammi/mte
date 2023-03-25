@@ -22,6 +22,7 @@ import { FaInstagram } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
 import { FaYoutube } from "react-icons/fa"
+import { FaEtsy } from "react-icons/fa"
 
 import { GiWeightLiftingUp } from "react-icons/gi"
 
@@ -52,6 +53,12 @@ const profiles = {
     url: "https://www.instagram.com/mirotammi/",
     icon: <FaInstagram />,
   },
+  etsy: {
+    name: "Etsy store",
+    desc: "Printable art",
+    url: "https://www.etsy.com/fi-en/shop/PrintNordic?ref=shop_sugg_market",
+    icon: <FaEtsy />
+  }
   // hevyapp: {
   //   name: "Hevy",
   //   desc: "Code 'BRIANRUIZ' for 20% off",
@@ -146,6 +153,17 @@ const NotFoundPage = ({ data, location }) => {
               label="My Links"
               component="a"
               href="/links"
+              sx={{
+                textTransform: "capitalize",
+                fontWeight: 400,
+                minWidth: "60px",
+                "&.Mui-selected": { color: "text.primary" },
+              }}
+            />
+            <Tab
+              label="Code Portfolio"
+              component="a"
+              href="/code"
               sx={{
                 textTransform: "capitalize",
                 fontWeight: 400,
