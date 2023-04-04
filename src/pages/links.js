@@ -24,7 +24,10 @@ import { FaLinkedin } from "react-icons/fa"
 import { FaYoutube } from "react-icons/fa"
 import { FaEtsy } from "react-icons/fa"
 
-import { GiWeightLiftingUp } from "react-icons/gi"
+// Analytics components
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
+import customerIo from '@analytics/customerio'
 
 
 
@@ -69,6 +72,23 @@ const profiles = {
 
 const NotFoundPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+
+    /* Initialize analytics */
+const analytics = Analytics({
+  app: 'mtemedia',
+  version: 100,
+  plugins: [
+    googleAnalytics({
+      trackingId: 'G-SVBWR0FNVK',
+    }),
+    customerIo({
+      siteId: '123-xyz'
+    })
+  ]
+})
+
+/* Track a page view */
+analytics.page()
 
   return (
     <Layout

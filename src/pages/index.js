@@ -16,8 +16,30 @@ import Grid from "@mui/material/Grid"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
 
+// Analytics components
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
+import customerIo from '@analytics/customerio'
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props
+
+    /* Initialize analytics */
+  const analytics = Analytics({
+    app: 'mtemedia',
+    version: 100,
+    plugins: [
+      googleAnalytics({
+        trackingId: 'G-SVBWR0FNVK',
+      }),
+      customerIo({
+        siteId: '123-xyz'
+      })
+    ]
+  })
+
+  /* Track a page view */
+  analytics.page()
 
   return (
     <div
@@ -213,6 +235,7 @@ const Index = ({ data, location }) => {
           </TabPanel>
         ))}
       </Container>
+      
     </Layout>
   )
 }

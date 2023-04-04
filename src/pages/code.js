@@ -34,6 +34,11 @@ import register from '../images/register.png'
 import webapp from '../images/webapp.png'
 import {WiDayCloudyGusts} from "react-icons/wi"
 
+// Analytics components
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
+import customerIo from '@analytics/customerio'
+
 const returnBold = () => {
   var stack = "STACK"
   //return <b>stack</b>
@@ -245,7 +250,22 @@ const GearPage = ({ data, location }) => {
     return acc
   }, [])
 
+  /* Initialize analytics */
+const analytics = Analytics({
+  app: 'mtemedia',
+  version: 100,
+  plugins: [
+    googleAnalytics({
+      trackingId: 'G-SVBWR0FNVK',
+    }),
+    customerIo({
+      siteId: '123-xyz'
+    })
+  ]
+})
 
+/* Track a page view */
+analytics.page()
 
   return (
     <Layout

@@ -27,6 +27,11 @@ import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 
+// Analytics components
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
+import customerIo from '@analytics/customerio'
+
 const gear = {
   "Vegan Leather Desk Mat": {
     category: "Desk Setup",
@@ -232,6 +237,23 @@ const GearPage = ({ data, location }) => {
     }
     return acc
   }, [])
+
+    /* Initialize analytics */
+const analytics = Analytics({
+  app: 'mtemedia',
+  version: 100,
+  plugins: [
+    googleAnalytics({
+      trackingId: 'G-SVBWR0FNVK',
+    }),
+    customerIo({
+      siteId: '123-xyz'
+    })
+  ]
+})
+
+/* Track a page view */
+analytics.page()
 
   return (
     <Layout

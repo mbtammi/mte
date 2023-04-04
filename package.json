@@ -17,6 +17,7 @@
     "@mui/material": "^5.8.4",
     "@parcel/config-default": "^2.6.0",
     "algoliasearch": "^4.13.1",
+    "analytics": "^0.8.1",
     "charter-webfont": "^4.1.0",
     "gatsby": "^4.16.0",
     "gatsby-plugin-algolia": "^0.26.0",
