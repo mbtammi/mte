@@ -17,7 +17,7 @@ const profiles = {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/miro-tammi-701bb3205/",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png",
-    followers: "134",
+    followers: "163",
   },
   instagram: {
     name: "Instagram",

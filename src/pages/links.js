@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ReactGA from 'react-ga4';
+import { useEffect } from "react";
 
 
 import Avatar from "@mui/material/Avatar"
@@ -70,25 +72,11 @@ const profiles = {
   // }
 }
 
-const NotFoundPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+const LinksPage = ({ data, location }) => {
 
-    /* Initialize analytics */
-const analytics = Analytics({
-  app: 'mtemedia',
-  version: 100,
-  plugins: [
-    googleAnalytics({
-      trackingId: 'G-SVBWR0FNVK',
-    }),
-    customerIo({
-      siteId: '123-xyz'
-    })
-  ]
-})
+  const TRACKING_ID = "G-SVBWR0FNVK"; // OUR_TRACKING_ID
+  ReactGA.initialize(TRACKING_ID);
 
-/* Track a page view */
-analytics.page()
 
   return (
     <Layout
@@ -231,7 +219,7 @@ analytics.page()
   )
 }
 
-export default NotFoundPage
+export default LinksPage
 
 export const pageQuery = graphql`
   query {

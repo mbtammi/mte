@@ -8,6 +8,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@analytics/customerio": "^0.2.2",
+    "@analytics/google-analytics": "^1.0.5",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@lyket/react": "^1.4.8",
@@ -40,6 +42,8 @@
     "prismjs": "^1.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-ga": "^3.3.1",
+    "react-ga4": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.6.0",
     "react-instantsearch-dom": "^6.30.0",

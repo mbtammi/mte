@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import ReactGA from "react-ga4"
+import { useEffect } from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -238,22 +240,8 @@ const GearPage = ({ data, location }) => {
     return acc
   }, [])
 
-    /* Initialize analytics */
-const analytics = Analytics({
-  app: 'mtemedia',
-  version: 100,
-  plugins: [
-    googleAnalytics({
-      trackingId: 'G-SVBWR0FNVK',
-    }),
-    customerIo({
-      siteId: '123-xyz'
-    })
-  ]
-})
-
-/* Track a page view */
-analytics.page()
+  const TRACKING_ID = "G-SVBWR0FNVK"; // OUR_TRACKING_ID mtemedia ID
+  ReactGA.initialize(TRACKING_ID);
 
   return (
     <Layout

@@ -3,12 +3,16 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ReactGA from 'react-ga4';
 
 import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 
 const NotFoundPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+
+  const TRACKING_ID = "G-SVBWR0FNVK"; // OUR_TRACKING_ID
+  ReactGA.initialize(TRACKING_ID);
+
 
   return (
     <Layout location={location} title={"404: Not Found"}>

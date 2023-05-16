@@ -10,9 +10,9 @@ module.exports = {
     description: `Miro Tammi is a Software Engineer based out of Finland.`,
     siteUrl: `http://mtemedia.org`,
     social: {
-      linkedin: `brianruizy`,
-      github: `BrianRuizy`,
-      instagram: `brianruizy`,
+      linkedin: `Miro Tammi`,
+      github: `mbtammi`,
+      instagram: `mirotammi`,
       youtube: `UCCIFp-Se_xjfYc94H04oK7Q`,
     },
   },

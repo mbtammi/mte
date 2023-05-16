@@ -1,5 +1,6 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import {useEffect } from 'react';
+import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
 // local imports
@@ -16,30 +17,18 @@ import Grid from "@mui/material/Grid"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
 
+import ReactGA from "react-ga4";
+
 // Analytics components
+// import Analytics from 'analytics'
 import Analytics from 'analytics'
 import googleAnalytics from '@analytics/google-analytics'
 import customerIo from '@analytics/customerio'
 
+
 function TabPanel(props) {
+  
   const { children, value, index, ...other } = props
-
-    /* Initialize analytics */
-  const analytics = Analytics({
-    app: 'mtemedia',
-    version: 100,
-    plugins: [
-      googleAnalytics({
-        trackingId: 'G-SVBWR0FNVK',
-      }),
-      customerIo({
-        siteId: '123-xyz'
-      })
-    ]
-  })
-
-  /* Track a page view */
-  analytics.page()
 
   return (
     <div
@@ -66,6 +55,10 @@ TabPanel.propTypes = {
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 }
+const TRACKING_ID = "G-SVBWR0FNVK"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
+
 
 function a11yProps(index) {
   return {
@@ -83,6 +76,8 @@ const Index = ({ data, location }) => {
     setValue(newValue)
   }
 
+
+
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -95,6 +90,21 @@ const Index = ({ data, location }) => {
       </Layout>
     )
   }
+
+  // const analytics = Analytics({
+  //   app: 'mtemedia',
+  //   version: 100,
+  //   plugins: [
+  //     googleAnalytics({
+  //       trackingId: 'G-SVBWR0FNVK',
+  //     })
+  //   ]
+  // })
+
+  // /* Track a page view */
+  // analytics.page()
+
+  
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -205,7 +215,6 @@ const Index = ({ data, location }) => {
             )
           })}
         </TabPanel>
-
         {/* categories panels */}
         {data.allMdx.group.map((category, index) => (
           <TabPanel value={value} index={index + 1} key={category.fieldValue}>

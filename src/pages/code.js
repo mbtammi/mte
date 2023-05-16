@@ -1,5 +1,7 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import ReactGA from "react-ga4"
+import { useEffect } from "react";
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -27,25 +29,12 @@ import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 
-import { FaInstagram } from "react-icons/fa"
 import login from '../images/login.png'
 import rocketgame from '../images/rocketgame.png'
 import register from '../images/register.png'
 import webapp from '../images/webapp.png'
-import {WiDayCloudyGusts} from "react-icons/wi"
 
-// Analytics components
-import Analytics from 'analytics'
-import googleAnalytics from '@analytics/google-analytics'
-import customerIo from '@analytics/customerio'
-
-const returnBold = () => {
-  var stack = "STACK"
-  //return <b>stack</b>
-  return stack.bold()
-}
-
-const gear = {
+const code = {
 
   "HyvyApp": {
     category: "Code Projects",
@@ -241,31 +230,17 @@ const gear = {
   // },
 }
 
-const GearPage = ({ data, location }) => {
-  const categories = Object.keys(gear).reduce((acc, key) => {
-    const category = gear[key].category
+const CodePage = ({ data, location }) => {
+  const categories = Object.keys(code).reduce((acc, key) => {
+    const category = code[key].category
     if (!acc.includes(category)) {
       acc.push(category)
     }
     return acc
   }, [])
 
-  /* Initialize analytics */
-const analytics = Analytics({
-  app: 'mtemedia',
-  version: 100,
-  plugins: [
-    googleAnalytics({
-      trackingId: 'G-SVBWR0FNVK',
-    }),
-    customerIo({
-      siteId: '123-xyz'
-    })
-  ]
-})
-
-/* Track a page view */
-analytics.page()
+  const TRACKING_ID = "G-SVBWR0FNVK"; // OUR_TRACKING_ID
+  ReactGA.initialize(TRACKING_ID);
 
   return (
     <Layout
@@ -421,17 +396,17 @@ analytics.page()
                   disabled
                   size="small"
                   label={
-                    Object.keys(gear).filter(
-                      key => gear[key].category === category
+                    Object.keys(code).filter(
+                      key => code[key].category === category
                     ).length > 1
                       ? `${
-                          Object.keys(gear).filter(
-                            key => gear[key].category === category
+                          Object.keys(code).filter(
+                            key => code[key].category === category
                           ).length
                         } items`
                       : `${
-                          Object.keys(gear).filter(
-                            key => gear[key].category === category
+                          Object.keys(code).filter(
+                            key => code[key].category === category
                           ).length
                         } item`
                   }
@@ -439,8 +414,8 @@ analytics.page()
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container spacing={2}>
-                  {Object.keys(gear).map(key => {
-                    const item = gear[key]
+                  {Object.keys(code).map(key => {
+                    const item = code[key]
                     if (item.category === category) {
                       return (
                         <Grid item xs={12} sm={6} md={4} key={key}>
@@ -556,7 +531,7 @@ analytics.page()
   )
 }
 
-export default GearPage
+export default CodePage
 
 export const pageQuery = graphql`
   query {
