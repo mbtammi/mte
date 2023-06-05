@@ -115,7 +115,7 @@ export default function RightDrawer({ isRootPath, ThemeButton }) {
           src="https://media.licdn.com/dms/image/C4E03AQHDHrREVQNP_w/profile-displayphoto-shrink_800_800/0/1639561336256?e=1684368000&v=beta&t=zyFw1Tms8QCg2m4i_OXmQIzuPHKRMLPALFOJgQbK4mA"
           sx={{ width: 32, height: 32, backgroundColor: "divider" }}
         >
-          BR
+          MT
         </Avatar>
       </Box>
     </Box>

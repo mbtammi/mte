@@ -258,7 +258,7 @@ const PostDetailTemplate = ({ data, location }) => {
                     },
                   }}
                 >
-                  BR
+                  MT
                 </Avatar>
                 <Stack>
                   <Typography variant="body1">Miro Tammi</Typography>

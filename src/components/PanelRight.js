@@ -146,7 +146,7 @@ export default function PanelRight({ extraDrawerContent }) {
                     src="https://media.licdn.com/dms/image/C4E03AQHDHrREVQNP_w/profile-displayphoto-shrink_800_800/0/1639561336256?e=1684368000&v=beta&t=zyFw1Tms8QCg2m4i_OXmQIzuPHKRMLPALFOJgQbK4mA"
                     sx={{ width: 64, height: 64, backgroundColor: "divider" }}
                   >
-                    BR
+                    MT
                   </Avatar>
                   <div>
                     <Typography

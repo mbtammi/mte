@@ -187,7 +187,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `BR Blog`,
+        name: `MT Blog`,
         short_name: `b-r.io`,
         start_url: `/`,
         background_color: `#121212`,
